@@ -23,9 +23,9 @@ __Create Azure DevOps Project__: Initiate the release pipeline setup by creating
 
 __Personal Access Token__: From user's setting on the project page, create a PAT with full access permission granted.
 
-__Self-Hosted Linux Agent__: Handles deployment processes; pulling archive, unpacking, setting env variables, dependencies etc and finally deploying to Azure Web App. Create a Linu VM, Download and install Linux agent on the VM, use above PAT token to register the agent as 'Default' agent pool, and run the agent to listen for jobs from Azure DevOps.
+__Self-Hosted Linux Agent__: Handles deployment processes; pulling archive, unpacking, setting env variables, dependencies etc and finally deploying to Azure Web App. Create a Linux VM, Download and install Linux agent on the VM, use above PAT token to register the agent as 'Default' agent pool, and run the agent to listen for jobs from Azure DevOps.
 
-__Jenkins__: CI/CD server for building and archiving the nodejs code and files; add the task as a 'freestyle project', configure the source code repository with a 'jenkins' branch, add shell command 'zip -r archive.zip node_modules package.json server.js' to build step action and add 'archive.zip' to postbuild action.
+__Jenkins__: CI/CD server for building and archiving the nodejs code and files; add the task as a 'freestyle project', configure the source code repository with a 'jenkins' branch, add shell command 'zip -r archive.zip node_modules package.json server.js' to the 'build step action' and add 'archive.zip' to the 'postbuild action' section.
     </td>
   </tr>
 </table>
